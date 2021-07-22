@@ -10,27 +10,27 @@ class User
     private string $email;
     private string $password;
 
-    public function setUsername()
+    public function getUsername()
     {
         return $this->username;
     }
-    public function setEmail()
+    public function getEmail()
     {
         return $this->email;
     }
-    public function setPassword()
+    public function getPassword()
     {
         return $this->password;
     }
-    public function getUsername($username)
+    public function setUsername(string $username)
     {
         $this->username = $username;
     }
-    public function getEmail($email)
+    public function setEmail(string $email)
     {
         $this->email = $email;
     }
-    public function getPassword($password)
+    public function setPassword(string $password)
     {
         $this->password = $password;
     }

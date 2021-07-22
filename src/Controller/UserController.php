@@ -9,7 +9,9 @@ class UserController
     public function register(): void
     {
         $user = new User();
-        var_dump($user);
+        $username = (string) filter_input(INPUT_POST, "username");
+        $user->setUsername($username);
+
         include "./../templates/userTemplate.html.php";
     }
 }
