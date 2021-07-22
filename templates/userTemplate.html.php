@@ -1,5 +1,5 @@
 <form method="post">
-    <labe>OUi</label>
+    <label>OUi</label>
         <input type="text" name="username" value="<?= $user->getUsername() ?>">
         <button type="submit">Click</button>
 </form>
