@@ -1,8 +1,11 @@
 <?php
+namespace App\Model;
 
-class admin
+class Figurine
 {
     private float $price;
+    private string $description;
+    private float $dimension;
     private string $name;
     private mixed $image;
 
@@ -16,6 +19,16 @@ class admin
         $this->name = $name;
     }
 
+    public function setDescription(string $description)
+    {
+        $this->description = $description;
+    }
+
+    public function setDimension(float $dimension)
+    {
+        $this->dimension = $dimension;
+    }
+
     public function setPrice(float $price)
     {
         $this->price = $price;
@@ -24,6 +37,16 @@ class admin
     public function getImage()
     {
         return $this->image;
+    }
+
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    public function getDimension()
+    {
+        return $this->dimension;
     }
 
     public function getPrice()

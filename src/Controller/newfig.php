@@ -2,11 +2,13 @@
 
 namespace App\Controller;
 
-function  admin()
+use App\Model\Figurine;
+
+function  newFigurine()
 {
-    $urlerror = null;
+
     $image = filter_input(INPUT_POST, "favorites");
-    $imageverif = filter_var($image, FILTER_VALIDATE_URL);
+
 
 
     $link = [
@@ -112,6 +114,6 @@ function  admin()
         exit();
     }
 
-    include '../templates/home/home.html.php';
+
 }
 
