@@ -6,9 +6,9 @@ namespace App\Model;
 
 class User
 {
-    private string $username;
-    private string $email;
-    private string $password;
+    private  $username = "";
+    private  $email = "";
+    private  $password = "";
 
     public function getUsername()
     {
@@ -22,15 +22,15 @@ class User
     {
         return $this->password;
     }
-    public function setUsername(string $username)
+    public function setUsername($username)
     {
         $this->username = $username;
     }
-    public function setEmail(string $email)
+    public function setEmail($email)
     {
         $this->email = $email;
     }
-    public function setPassword(string $password)
+    public function setPassword($password)
     {
         $this->password = $password;
     }
