@@ -8,5 +8,9 @@ return [
     "/user" => [
         "class" => "App\\Controller\\UserController",
         "method" => "register"
+    ],
+    "/admin" => [
+    "class" => "App\\Controller\\newFig.php",
+    "method" => "register"
     ]
 ];

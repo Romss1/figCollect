@@ -1,12 +1,11 @@
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
 
     <title>Document</title>
 </head>
@@ -24,40 +23,54 @@
                 <label for="image" class="form-label">Image</label>
                 <input class="form-control" id="Inputimage" aria-describedby="imageHelp" name="image">
 
-                <?php if ($errorimage!=null):?>
-                    <div class="text-danger"><?= $form["email"][$errorimage] ?></div>
-                <?php endif?>
+                <?php if ($errorimage != null): ?>
+                    <div class="text-danger"><?= $form["Image"][$errorimage] ?></div>
+                <?php endif ?>
             </div>
 
             <div class="mb-3 col-12 col-md-6">
 
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                <label for="price" class="form-label">Price</label>
+                <input type="price" class="form-control" id="examplePrice" name="price">
 
-                <?php if ($errorpassword!=null):?>
-                    <div class="text-danger"><?= $form["password"][$errorpassword] ?></div>
-                <?php endif?>
+                <?php if ($errorPrice != null): ?>
+                    <div class="text-danger"><?= $form["Price"][$errorPrice] ?></div>
+                <?php endif ?>
 
 
             </div>
 
 
             <div class="mb-3 col-12 col-md-6">
-                <label class="comfirm" for="password">Confirm</label>
-                <input type="password" class="form-control" id="Comfirm" name="comfirm">
+                <label class="dimension" for="password">Dimension</label>
+                <input type="dimension" class="form-control" id="dimension" name="dimension">
 
-                <?php if ($errorcomfirm!=null):?>
-                    <div class="text-danger">  <?= $form["comfirm"][$errorcomfirm] ?> </div>
-                <?php endif?>
-
-
+                <?php if ($errorDimension != null): ?>
+                    <div class="text-danger">  <?= $form["Dimension"][$errorDimension] ?> </div>
+                <?php endif ?>
             </div>
 
-        </div>
+            <div class="mb-3 col-12 col-md-6">
+                <label class="description" for="password">Description</label>
+                <input type="description" class="form-control" id="description" name="description">
+
+                <?php if ($errorDescription != null): ?>
+                    <div class="text-danger">  <?= $form["Description"][$errorDescription] ?> </div>
+                <?php endif ?>
+            </div>
+
+            <div class="mb-3 col-12 col-md-6">
+                <label class="name" for="password">Name</label>
+                <input type="name" class="form-control" id="name" name="name">
+
+                <?php if ($errorDescription != null): ?>
+                    <div class="text-danger">  <?= $form["name"][$errorDescription] ?> </div>
+                <?php endif ?>
+            </div>
 
 
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <?=  $userexist ?>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <?= $userexist ?>
     </form>
 </main>
 </body>
